@@ -22,7 +22,7 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Run Tests
-          command: gradlew assembleDebug -p ./CircleCiDemo -PCIversionName=$APP_VERSION_NAME -PCIversionCode=$VERSION_CODE
+          command: -./gradlew assembleDebug -p ./CircleCiDemo -PCIversionName=$APP_VERSION_NAME -PCIversionCode=$VERSION_CODE
       - store_artifacts:
           path: app/build/reports
           destination: reports
