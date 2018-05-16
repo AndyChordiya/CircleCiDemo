@@ -22,7 +22,7 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Run Tests
-          command: ./gradlew -PciBuild=true :app:assembleDebug :app:assembleAndroidTest
+          command: sh ./scripts/deploy-hockeyapp.sh app/build/outputs/apk/app-debug.apk $HOCKEYAPP_TOKEN $HOCKEY_APP_ID
       - store_artifacts:
           path: app/build/outputs/apk/
           destination: /apk/
