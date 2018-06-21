@@ -6,6 +6,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Declaration 
     private Button btnSumbit;
 
     @Override
@@ -13,5 +14,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnSumbit = (Button) findViewById(R.id.btnSumbit);
+
     }
 }
